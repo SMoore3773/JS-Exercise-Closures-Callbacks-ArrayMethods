@@ -110,8 +110,9 @@ function processSum(numberList, callback) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(num1, num2, callback) {
+  const numArr = [num1, num2];
+  return callback(numArr.reduce(function(acc, curVal){return acc*curVal;}));
 }
 
 /**
