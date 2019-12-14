@@ -283,16 +283,17 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit() {
+function counterMakerWithLimit(max) {
   let count = 0;
-  function counter() {
-   return count++;
+  const counter = () => {
+    if (count > max) {
+      count = 0;
+    }
+    return count++;
   }
   return counter;
-  if(count > 3){
-    let count = 0;
-  }
 }
+  
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
